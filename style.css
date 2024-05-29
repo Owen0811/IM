@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: rgba(35,28,26,0.8);
+    height: 70px;
+    width: 100%; /*與視窗同寬*/
+    position: fixed;
+}
+h1{
+    color: white;
+    position: absolute;
+    left: 50px; /*距離左邊緣100像素*/
+    top: 0;
+    line-height: 70px;
+    background-image:url(images/web_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    width:100px;
+    text-indent: -9999px;
+    transform: translateX(-50%);
+}
+
+
+header ul{ /*導覽列*/
+    position: absolute;
+    right:2vw; /*距離頁首右邊緣5vw*/
+    top:0; /*上邊緣為0*/
+    line-height: 70px; /*加大文字的行距*/
+}
+
+/*li本身是區塊元素，每個連結豆會獨佔一行，呈現上、下相疊的狀況，要轉成「行內元素」*/
+header li{ 
+    display: inline;
+    margin-right:4vw ; 
+    /*相對單位vw(Viewport Width)，視窗框度的4%*/
+    /*在不同大小的裝置，vw的數值也會配合視窗寬度進行自動的調整*/
+}
+/*header裡面所有的a標籤*/
+header a{
+    color: white;
+    text-decoration: none; /*底線就會不見*/
+    font-family: DFKai-SB;
+
+}
+header a:hover{ /*hover(懸停)*/
+    text-decoration: underline;
+}
+
+
+
+.course{
+    background-color: antiquewhite;
+    color: white;
+    height: 95vh; /*視窗高度85%*/
+    background-image: url(images/course.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.course h2{
+    color: #000;
+
+    font-size: 60px;
+    margin-top: 60px;
+    font-family: DFKai-SB;
+
+}
+.course p{
+    color: #444444;
+    font-size: 18px;
+    font-family: DFKai-SB;
+    margin: 15px 0;
+}
+.course div{
+    margin: 15px 0;
+
+}
+.course a{
+    color: #AE0000;
+    text-decoration: none;
+    border: 1px solid #ACACAC;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-family: DFKai-SB;
+}
+
+.slogan{
+    background-color: #485652;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    line-height: 1.8em;  /*行高*/
+    font-family: DFKai-SB;
+}
+
+.food{
+    display: flex;
+}
+.food img{
+    width: 50%;
+}
+.info{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: DFKai-SB;
+}
+.info p{
+    text-align: center;
+    line-height: 2em;
+    font-family: DFKai-SB;
+}
+.info div{
+    text-decoration: none;
+    border: 1px solid #ACACAC;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: DFKai-SB;
+}
+.info a{
+    color: #AE0000;
+    text-decoration: none;
+}
+
+
+.link{
+    display: flex;
+}
+.link img{
+    width: 50%;
+}
+.linkinfo{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.linkinfo h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-family: DFKai-SB;
+}
+.linkinfo p{
+    text-align: center;
+    line-height: 2em;
+    font-family: DFKai-SB;
+}
+.linkinfo div{
+    text-decoration: none;
+    border: 1px solid #ACACAC;
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: DFKai-SB;
+}
+.linkinfo a{
+    color: #AE0000;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #000;
+    color: #b7b7b7;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.8em;  /*行高*/
+    font-family: DFKai-SB;
+    text-align: center;
+}
+
+.menu{
+    display: none;
+}
+
+/* 響應式設計與法 */
+@media screen and (max-width: 768px){
+    header ul{
+        display:none;
+    }
+    header{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .course h2{
+        font-size: 40px;
+    }
+    .food{
+        flex-direction: column;
+    }
+    .food img{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .info h2{
+        font-size: 30px;
+    }
+    .link{
+        flex-direction: column;
+    }
+    .link img{
+        width: 100%;
+    }
+    .linkinfo{
+        width: 100%;
+        padding: 40px 0;
+    }
+    .linkinfo h2{
+        font-size: 30px;
+    }
+    .slogan{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 440px){
+    .slogan{
+        font-size: 12px;
+    }
+}

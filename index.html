@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資管小大一新生包</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!--網站的Logo等首頁的資訊-->
+    <h1>資管</h1>
+    <nav> <!--用來放置網站的導覽列或主選單-->
+        <ul>
+            <li><a href="#course">課程地圖</a></li>
+            <li><a href="#food">美食地圖</a></li>
+            <li><a href="#link">FB常用連結</a></li>
+            <li><a href="https://www.facebook.com/groups/200782593310517/" target="_blank">暨大資管</a></li>
+            <li><a href="https://www.instagram.com/ncnu_im?igsh=em01OGpxdHZqZ3U5" target="_blank">暨大系學會</a></li>    
+        </ul>
+    </nav> 
+    </header>
+
+    <main>
+        <section class="course" id="course">
+            <h2>課程地圖</h2>
+            <p>想知道大一的必修課在上什麼嗎？</p>
+            <div><a href="課程地圖.pdf" target="_blank">一探究竟</a></div>
+        </section>
+        
+        <section class="slogan">
+            <blockquote>🌟 探索未來，從暨南開始！ 🌟</blockquote>
+        </section>
+
+        <section class="food" id="food">
+            <img src="images/food.jpg" alt="">
+            <div class="info">
+                <h2>美食地圖</h2>
+                <p>想知道暨大人必吃的CP值美食是什麼嗎？</p>
+                <div><a href="index_food.html" target="_blank" class="button">一探究竟</a></div>
+            </div>
+        </section>
+
+        <section class="slogan">
+            <blockquote>"加入我們，一起探索無限可能，成為下一個資訊管理的先鋒！"</blockquote>
+        </section>
+
+        <section class="link" id="link">
+            <div class="linkinfo">
+                <h2>FB常用連結</h2>
+                <p>暨大人必知資訊報你知</p>
+                <div><a href="index_link.html">一探究竟</a></div>
+            </div>
+            <img src="images/link.jpg" alt="">
+
+
+        </section>
+    </main>
+
+    <footer><!--用來標註網頁的版權聲明等附加資料-->
+        <p>
+            54561南投縣埔里鎮大學路1號<br>Copyright © 2023 陳冠廷
+        </p>
+    </footer>
+
+
+    
+    <!-- JS連結 -->
+    <script src="script.js"></script>
+    
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

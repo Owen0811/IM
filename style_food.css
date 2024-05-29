@@ -1,0 +1,485 @@
+/* 版面設定 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.4s all linear;
+    font-size: 22px;
+}
+
+
+/* 第一區header  */
+
+header {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 10px 1rem 1rem rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+header img {
+    vertical-align: middle
+    ;
+    width: 50px;
+    height: 40px;
+    padding-bottom: -10px;
+    filter: saturate(8);
+}
+
+header .navbar a {
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(9, 152, 152);
+    padding-left: 10px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: rgb(9, 152, 152);
+}
+
+header .navbar a:hover {
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(0, 157, 50);
+    margin-left: 10px;
+    transition: 1s;
+    background-color: white;
+    padding: 20px 10px 20px 10px;
+}
+
+#menu-bar {
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(9, 152, 152);
+    border: 1px solid rgb(9, 152, 152);
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+}
+
+
+/* 第二區 首頁  */
+
+section {
+    padding: 10px;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: 400px;
+    align-items: center;
+    background: url(../images/foodmap.png) no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+.home .content {
+    flex: 1 1 30px;
+    margin-top: 60px;
+    padding: 50px;
+    background: rgb(2, 3, 3);
+    background: linear-gradient(90deg, rgba(2, 3, 3, 1) 0%, rgba(255, 255, 255, 0) 86%);
+}
+
+.home .content h3 {
+    font-size: 53px;
+    color: rgb(255, 208, 0);
+}
+
+.home .content p {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home img {
+    flex: 0.5 0.5 30px;
+}
+
+.home img {
+    width: 300px;
+    animation: moving 3s linear infinite;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateX(0rem);
+    }
+    50% {
+        transform: translateX(2rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+
+/* 第三區 經典  */
+
+.heading {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(9, 152, 152);
+    padding: 30px;
+}
+
+.heading span {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.category .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category .box-container .box {
+    flex: 1 1 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.category .box-container .box .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+}
+
+.category .box-container .box .content {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    height: 250px;
+    background-color: rgb(255, 208, 0);
+}
+
+.category .box-container .box .content img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.category .box-container .box .content h3 {
+    font-size: 20px;
+    color: rgb(9, 152, 152);
+}
+
+.category .box-container .box .content p {
+    font-size: 16px;
+    color: rgb(9, 152, 152);
+}
+
+.category .box-container .box:hover .image {
+    left: 0%;
+}
+
+.category .box-container .box:hover .content {
+    transform: translateY(100%);
+}
+
+
+
+
+/* 第三區 飯麵推薦  */
+
+.heading2 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(9, 152, 152);
+    padding: 30px;
+}
+
+.heading2 span {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.category2 .box2-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category2 .box2-container .box2 {
+    flex: 1 1 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.category2 .box2-container .box2 .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+}
+
+.category2 .box2-container .box2 .content2 {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    height: 250px;
+    background-color: rgb(255, 208, 0);
+}
+
+.category2 .box2-container .box2 .content2 img {
+    width: 130px;
+    height: 130px;
+    margin: 10px;
+}
+
+.category2 .box2-container .box2 .content2 h3 {
+    font-size: 20px;
+    color: rgb(9, 152, 152);
+}
+
+.category2 .box2-container .box2 .content2 p {
+    font-size: 16px;
+    color: rgb(9, 152, 152);
+}
+
+.category2 .box2-container .box2:hover .image {
+    left: 0%;
+}
+
+.category2 .box2-container .box2:hover .content2 {
+    transform: translateY(100%);
+}
+
+
+
+/* 第三區 火鍋專區  */
+
+.heading3 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(9, 152, 152);
+    padding: 30px;
+}
+
+.heading3 span {
+    font-size: 30px;
+    color: chocolate;
+}
+
+.category3 .box3-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category3 .box3-container .box3 {
+    flex: 1 1 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.category3 .box3-container .box3 .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+}
+
+.category3 .box3-container .box3 .content3 {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    height: 250px;
+    background-color: rgb(255, 208, 0);
+}
+
+.category3 .box3-container .box3 .content3 img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.category3 .box3-container .box3 .content3 h3 {
+    font-size: 20px;
+    color: rgb(9, 152, 152);
+}
+
+.category3 .box3-container .box3 .content3 p {
+    font-size: 16px;
+    color: rgb(9, 152, 152);
+}
+
+.category3 .box3-container .box3:hover .image {
+    left: 0%;
+}
+
+.category3 .box3-container .box3:hover .content3 {
+    transform: translateY(100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 第八區 Footer  */
+
+.footer {
+    background: rgb(255, 255, 255);
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    line-height: 2em;  /*行高*/
+    text-align: center;
+    
+}
+
+
+/* 回到上層按鈕 */
+
+#scroll-up {
+    position: fixed;
+    top: -120%;
+    right: 20px;
+    padding: 10px;
+    font-size: 25px;
+    background: chocolate;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 1s linear;
+}
+
+#scroll-up.active {
+    top: 80%;
+}
+
+
+/* RWD 手機版 */
+
+@media (max-width:600px) {
+    /* 第一區header */
+    #menu-bar {
+        display: initial;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    header .navbar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 208, 0);
+        border-top: 3px solid gray;
+        /* 隱藏下拉選單 */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .navbar a {
+        /* 疊起來 */
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        color: rgb(20, 80, 80);
+        margin: 10px;
+        padding: 6px;
+        border-left: 3px solid gray;
+        background-color: white;
+    }
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 10px;
+    }
+    /* 第二區 */
+    .home .content {
+        text-align: center;
+        margin-top: 70px;
+        padding-top: 20px;
+    }
+    .home img {
+        width: 400px;
+        margin-top: -80px;
+        margin-left: -50px;
+    }
+    .btn {
+        width: 100%;
+        z-index: 4;
+    }
+    /* 第三區 */
+    .category .box-container .box {
+        /* flex-direction: column; */
+        flex: 1 1 auto;
+    }
+    
+    .gallery .box-container .box {
+        /* flex-direction: column; */
+        flex: 1 1 auto;
+    }
+
+/* 第三區2 */
+.category2 .box2-container .box2 {
+    /* flex-direction: column; */
+    flex: 1 1 auto;
+}
+
+.gallery2 .box2-container .box2 {
+    /* flex-direction: column; */
+    flex: 1 1 auto;
+}
+
+/* 第三區3 */
+.category3 .box3-container .box3 {
+    /* flex-direction: column; */
+    flex: 1 1 auto;
+}
+
+.gallery3 .box3-container .box3 {
+    /* flex-direction: column; */
+    flex: 1 1 auto;
+}
+   
+}

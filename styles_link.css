@@ -1,0 +1,121 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 2em;
+    border-bottom: 4px solid #000000;
+    padding-bottom: 10px;
+    display: inline-block;
+    animation: textColorChange 3s infinite;
+}
+
+@keyframes textColorChange {
+    0% { color: #007BFF; }
+    25% { color: #00C851; }
+    50% { color: #ffbb33; }
+    75% { color: #ff4444; }
+    100% { color: #007BFF; }
+}
+
+.group {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.group:hover {
+    background-color: #f0f8ff;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.group img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.group:hover img {
+    transform: scale(1.05);
+}
+
+.group h2 {
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.group p {
+    color: #555555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.group a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.group a:hover {
+    background-color: #0056b3;
+}
+
+.group::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.group:hover::after {
+    opacity: 1;
+}
+
