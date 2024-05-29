@@ -85,7 +85,7 @@ section {
     gap: 10px;
     min-height: 400px;
     align-items: center;
-    background: url(images/foodmap.png) no-repeat;
+    background: url("images/foodmap.png") no-repeat;
     background-size:cover;
     background-position: center;
 }
