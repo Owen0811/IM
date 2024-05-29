@@ -480,5 +480,12 @@ section {
     /* flex-direction: column; */
     flex: 1 1 auto;
 }
+@media screen and (max-width: 525px){
+    header{
+        display: none;
+    }
+    .home{
+        display: none;
+    }
    
 }
